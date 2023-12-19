@@ -1,0 +1,19 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0.202.3-14",
+    
+    //Personalización del editor
+    "customizations":
+     {
+        "vscode": 
+        {
+            //lista de extensiones requeridas
+            "extensions": 
+            [
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "salesforce.salesforcedx-vscode"
+            ]
+         }  
+     },
+     "postCreateCommand": "npm install --global sfdx-cli"
+}
