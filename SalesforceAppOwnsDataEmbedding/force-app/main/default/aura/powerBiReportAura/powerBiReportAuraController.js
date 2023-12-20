@@ -56,7 +56,7 @@
             var reportId = embeddingData.reportId;
             var embedUrl = embeddingData.embedUrl;
             var token = embeddingData.embedToken;
-  
+            var models = window['powerbi-client'].models;
             var config = {
               type: "report",
               id: reportId,
@@ -66,8 +66,11 @@
               settings: {
                 panes: {
                   filters: { expanded: false, visible: false },
-                  pageNavigation: { visible: false }
-                }
+                  pageNavigation: { visible: false },
+                  
+                },
+                layoutType: models.LayoutType.MobilePortrait
+               
               }
             };
   
